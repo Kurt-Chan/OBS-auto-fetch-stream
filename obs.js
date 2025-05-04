@@ -84,6 +84,7 @@ async function obsMain(config) {
         const filter = filters.find(item => item.filterName === 'Detect');
 
         if (filter) {
+            // if filter is found, apply the settings
             await obs.call('SetSourceFilterSettings', {
                 sourceName: config.mediaSourceName,
                 filterName: 'Detect',
@@ -102,6 +103,7 @@ async function obsMain(config) {
             })
         }
         else {
+            // if filter is not found, create a filter
             await obs.call('CreateSourceFilter', {
                 sourceName: config.mediaSourceName,
                 filterName: 'Detect',
@@ -120,6 +122,7 @@ async function obsMain(config) {
             });
         }
 
+        // Set stream configuration
         await obs.call('SetStreamServiceSettings', {
             streamServiceType: 'rtmp_custom',
             streamServiceSettings: {
@@ -128,6 +131,7 @@ async function obsMain(config) {
             }
         });
 
+        // Start Stream
         await obs.call('StartStream');
         console.log(`${config.name}: Streaming started!`);
     } catch (error) {
