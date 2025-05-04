@@ -79,6 +79,7 @@ async function obsMain(config) {
             });
         }
 
+        // Source Filter
         // Checks if the Detect plugin is already set, if not set it automatically (apply filters)
         const { filters } = await obs.call('GetSourceFilterList', { sourceName: config.mediaSourceName })
         const filter = filters.find(item => item.filterName === 'Detect');
