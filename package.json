@@ -1,0 +1,24 @@
+{
+  "name": "obs-auto-fetch-stream",
+  "version": "1.0.0",
+  "description": "OBS Auto Fetch CCTV Stream Script",
+  "main": "obs.js",
+  "bin": "obs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node obs.js"
+  },
+    "pkg": {
+    "scripts": [],
+    "assets": [
+      ".env"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "obs-websocket-js": "^5.0.6"
+  }
+}

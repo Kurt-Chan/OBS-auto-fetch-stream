@@ -1,0 +1,8 @@
+node_modules
+.env
+autorun.bat
+build
+autorun.spec
+autorun.exe
+autoStream.exe
+dist
