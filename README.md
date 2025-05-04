@@ -87,7 +87,21 @@ You’ll need **two separate OBS folders** for the automation to work.
       python autorun.py
    ```
 ---
+## Build
+- To build `obs.js` into executable, run the command. (Make sure you have [pkg](https://www.npmjs.com/package/pkg) installed globally.)
+   ```
+   pkg . --targets node18-win-x64 --output autoStream.exe 
+   ```
+- To build `autorun.py`, run the command:
+   ```
+   pyinstaller --onefile autorun.py --add-data "autoStream.exe;."
+   ```
+- Compile all executable files with the .env files into one folder.
+
+---
 
 **Kurt Chan**  
 [Portfolio](https://kurtchan.com) | [Blog about this](https://dev.to/kurtchan/how-i-automated-obs-streaming-with-javascript-and-saved-our-office-hours-of-setup-time-12ja)
 
+
+   
