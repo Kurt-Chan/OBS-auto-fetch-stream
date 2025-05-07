@@ -8,13 +8,13 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Launch OBS1
 obs1_dir = os.path.dirname(OBS1_DIR)
-obs1 = subprocess.Popen([OBS1_DIR, '--portable'], cwd=obs1_dir)
+obs1 = subprocess.Popen([OBS1_DIR, '--portable','--disable-shutdown-check'], cwd=obs1_dir)
 print("Launching OBS1 on port 4455...")
 time.sleep(5)
 
 # Launch OBS2
 obs2_dir = os.path.dirname(OBS2_DIR)
-obs2 = subprocess.Popen([OBS2_DIR, '--portable'], cwd=obs2_dir)
+obs2 = subprocess.Popen([OBS2_DIR, '--portable', '--disable-shutdown-check'], cwd=obs2_dir)
 print("Launching OBS2 on port 4456...")
 time.sleep(5)
 
