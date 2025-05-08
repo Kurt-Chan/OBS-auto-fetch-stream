@@ -9,9 +9,7 @@ Welcome! This tool will automatically launch **two OBS windows instances** and s
 
 - **OBS Studio version 30.1.0 or above**  
   [Download OBS here](https://obsproject.com/)
-- **Download the automation script:**  
-  - [Two OBS instances script](#)
-  - [One OBS instance script](#)
+- Download the automation script in the [Releases](https://github.com/Kurt-Chan/OBS-auto-fetch-stream/releases/tag/v1.0.0) page
 
 ---
 
